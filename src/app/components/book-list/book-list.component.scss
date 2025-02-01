@@ -1,0 +1,21 @@
+.book-list-card {
+  max-width: 1000px;
+  min-width: 300px;
+  margin: auto;
+  padding: 16px;
+  background: rgba(1, 53, 21, 0.3);
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.secondary-text {
+  font-size: 0.9em;
+  color: gray;
+}
+
+.heading {
+  color: aliceblue;
+}

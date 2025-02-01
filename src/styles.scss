@@ -1,0 +1,22 @@
+
+:root {
+    --mat-sys-primary:#013411 !important;
+    --mdc-outlined-text-field-input-text-color: #ffffff !important;
+    --mat-select-enabled-trigger-text-color: #ffffff !important;
+  }
+  
+
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background-image: url('/assets/images/lib5.jpg');
+    background-size: cover;
+    background-position: center;
+}
+

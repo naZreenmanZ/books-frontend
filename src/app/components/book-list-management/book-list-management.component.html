@@ -1,0 +1,63 @@
+<mat-card-title class="heading">🗒️ My Book Lists </mat-card-title>
+
+<mat-card class="book-list-card">
+
+  <!-- Scrollable List Holder -->
+  <div class="scrollable-list">
+    <mat-accordion>
+      <mat-expansion-panel *ngFor="let list of bookLists()">
+        <mat-expansion-panel-header>
+          <div class="list-header">
+            <strong>{{ list.name }}</strong>
+            <span class="actions">
+              <!-- Add Book Button -->
+              <button mat-icon-button color="primary" (click)="openAddBookDialog(list.id)">
+                <mat-icon>add</mat-icon>
+              </button>
+
+              <!-- Delete Book List -->
+              <button mat-icon-button color="warn" (click)="deleteBookList(list.id)">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </span>
+          </div>
+        </mat-expansion-panel-header>
+
+        <!-- Books Under This List -->
+        <mat-list>
+          <mat-list-item *ngFor="let book of list.books">
+            <div class="book-item">
+              📖 {{ book.title }} by {{ book.author_name }}
+              <button mat-icon-button color="warn" (click)="removeBookFromList(list.id, book.id)">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </div>
+          </mat-list-item>
+        </mat-list>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+
+
+  <!-- Create a New List -->
+  <mat-card-title class="heading">🪄 Add New List</mat-card-title>
+
+  <mat-form-field appearance="outline">
+
+    <mat-label class="heading">Enter List Name</mat-label>
+    <input matInput [(ngModel)]="newListName"  />
+
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+
+    <mat-label class="heading">Select Books to Add</mat-label>
+    <mat-select [(ngModel)]="selectedBookIds" multiple>
+      <mat-option *ngFor="let book of books()" [value]="book.id">
+        📖 {{ book.title }} ({{ book.author_name }})
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <button mat-raised-button class="create-list-btn" color="primary" (click)="createList()">Create List ✨</button>
+
+</mat-card>

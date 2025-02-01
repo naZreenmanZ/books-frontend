@@ -1,0 +1,18 @@
+
+<mat-card-title class="heading">📚 Available Books</mat-card-title>
+
+<mat-card class="book-list-card ">
+  <!-- <mat-divider></mat-divider> -->
+
+  <mat-list>
+    <mat-list-item *ngFor="let book of books()">
+      
+      <div matLine>
+        <strong class="heading">📖{{ book.title }}</strong>  
+      </div>
+      <div matLine class="secondary-text">
+        by {{ book.author_name }} ({{ book.year }})
+      </div>
+    </mat-list-item>
+  </mat-list>
+</mat-card>

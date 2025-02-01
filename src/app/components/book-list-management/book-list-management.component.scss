@@ -1,0 +1,87 @@
+.book-list-card {
+  max-width: 1000px;
+  min-width: 500px;
+  margin: auto;
+  padding: 16px;
+  height: fit-content;
+  background: rgba(255, 255, 255, 0.2); 
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12px); 
+  -webkit-backdrop-filter: blur(12px); 
+  border: 1px solid rgba(255, 255, 255, 0.3); 
+}
+
+  .heading{
+    color: aliceblue;
+  }
+  
+  .secondary-text {
+    font-size: 0.9em;
+    color: gray;
+  }
+
+  .inner{
+    margin: 5px;
+    padding: 10px;
+    height: fit-content;
+  }
+  
+
+  .book-list-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 16px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-height: 500px; 
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .scrollable-list {
+    overflow-y: auto; 
+    max-height: 400px; 
+    padding: 10px;
+  }
+  
+  .list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .actions {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .book-item {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+  }
+  
+  button.create-list-btn {
+    background-color: #013411 !important; // Change background color (Blue)
+    color: white !important; // Change text color
+    // border-radius: 8px; // Rounded corners
+    font-weight: bold; // Make text bold
+    font-family: cursive;
+    padding: 10px 20px; // Adjust padding
+    transition: all 0.3s ease-in-out; // Smooth hover effect
+  
+    &:hover {
+      background-color: #023406; // Darker blue on hover
+    }
+  
+    &:active {
+      transform: scale(1.98); // Slight scale effect on click
+    }
+  }
+
+  

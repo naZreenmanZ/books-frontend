@@ -1,0 +1,20 @@
+<h2 mat-dialog-title>📚 Select Books</h2>
+
+<mat-dialog-content>
+  
+    <mat-list *ngIf="books.length > 0; else noBooks">
+        <mat-list-item *ngFor="let book of books">
+            📖 {{ book.title }} ({{ book.author_name }})
+            <mat-checkbox (change)="toggleSelection(book.id)"></mat-checkbox>
+        </mat-list-item>
+    </mat-list>
+
+    <ng-template #noBooks>
+        <p>❌ No books found!</p>
+    </ng-template>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+    <button mat-button (click)="dialogRef.close()">Cancel</button>
+    <button mat-raised-button color="primary" (click)="confirmSelection()">Add Books</button>
+</mat-dialog-actions>
